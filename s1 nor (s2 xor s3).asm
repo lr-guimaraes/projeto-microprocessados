@@ -18,7 +18,7 @@ test1_PD4: ;
 	sbis DDRD,4  ;if ==1
 	rjmp test1_PD5	
 	; if PD3 and PD4 are equal to 	
-	sbis DDRD,4
+	sbic DDRD,4
 	rjmp turns_on
 
 test2_PD4:
