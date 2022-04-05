@@ -6,7 +6,7 @@ start:
 
 test_PD4:
 	;if PD4 == 0
-	sbis DDRD,4 
+	cbis DDRD,4 
 	rjmp test1_PD3
 	rjmp test2_PD3
 
