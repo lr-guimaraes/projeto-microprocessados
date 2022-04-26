@@ -1,0 +1,34 @@
+
+; NOPs to test (prepare the PIPELINE)
+nop
+nop
+nop
+
+return:
+	ldi	R16,200
+	call delay_us
+	rjmp return
+; Realize a stop the R16 us
+
+delay_us:
+	nop ;pause 1
+	nop
+	nop
+delay_us_return:
+	dec	R16 ; if ==
+	cpi R16,0
+	breq delay_us_end
+	;pause 2
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	rjmp delay_us_return
+
+delay_us_end:
+	ret 
